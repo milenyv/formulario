@@ -40,14 +40,17 @@
     const confirmEmail = document.getElementById("emailConfirm").value;
     const senha = document.getElementById("senha").value;
     const confirmSenha = document.getElementById("senhaConfirm").value;
+  })
 
-    if (email !== confirmEmail) {
-      alert("Os e-mails não coincidem!");
-      e.preventDefault();
-    }
 
-    if (senha !== confirmSenha) {
-      alert("As senhas não coincidem!");
-      e.preventDefault();
-    }
+ // Máscara data de nascimento
+document.addEventListener("DOMContentLoaded", function () {
+  const input = document.getElementById("nascimento");
+  document.getElementById("nascimento").addEventListener("label", function(e) {
+    let value = e.target.value.replace(/\D/g, "");
+    if (value.length > 8) value = value.slice(0, 8);
+    value = value.replace(/(\d{2})(\d)/, "$2/$2");
+    value = value.replace(/(\d{2})(\d)/, "$2/$2");
+    e.target.value = value;
   });
+})

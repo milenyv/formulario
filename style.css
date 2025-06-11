@@ -2,8 +2,8 @@
     .containerform {
       max-width: 1000px;
       margin: auto;
-      background: #131F3B;
-      color: white;
+      background: #999999;
+      color: black;
       padding: 30px;
       border-radius: 12px;
       box-shadow: 0 4px 12px rgba(0,0,0,0.1);
@@ -30,12 +30,14 @@
       font-weight: bold;
       display: block;
       margin-bottom: 5px;
+      
     }
     .form-group input, .form-group select {
       width: 100%;
       padding: 10px;
       border: 1px solid #ccc;
       border-radius: 6px;
+      background-color: #EBEAEB;
     }
     button {
       background-color: #4CAF50;
