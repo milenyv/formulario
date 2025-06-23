@@ -34,7 +34,7 @@
     }
   });
 
-  // Validação básica
+  // Validação
   document.getElementById("cadastroForm").addEventListener("submit", function(e) {
     const email = document.getElementById("email").value;
     const confirmEmail = document.getElementById("emailConfirm").value;
@@ -54,3 +54,20 @@ document.addEventListener("DOMContentLoaded", function () {
     e.target.value = value;
   });
 })
+
+// Máscara Celular
+document.getElementById("celular").addEventListener("input", function(e) {
+  let value = e.target.value.replace(/\D/g, ""); // Remove tudo que não for número
+  if (value.length > 11) value = value.slice(0, 11); // Limita a 11 dígitos
+
+  // Aplica a máscara (99) 99999-9999
+  if (value.length > 6) {
+    value = value.replace(/^(\d{2})(\d{5})(\d{0,4})/, "($1) $2-$3");
+  } else if (value.length > 2) {
+    value = value.replace(/^(\d{2})(\d{0,5})/, "($1) $2");
+  } else {
+    value = value.replace(/^(\d{0,2})/, "($1");
+  }
+
+  e.target.value = value;
+});

@@ -2,14 +2,15 @@
     .containerform {
       max-width: 1000px;
       margin: auto;
-      background: #999999;
+      background: white;
       color: black;
       padding: 30px;
       border-radius: 12px;
       box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      border: solid 2px black;
     }
     h2 {
-      color: white;
+      
       border-bottom: 2px solid #eee;
       padding-bottom: 5px;
       margin-bottom: 20px;
@@ -35,7 +36,7 @@
     .form-group input, .form-group select {
       width: 100%;
       padding: 10px;
-      border: 1px solid #ccc;
+      border: 1px solid black;
       border-radius: 6px;
       background-color: #EBEAEB;
     }
